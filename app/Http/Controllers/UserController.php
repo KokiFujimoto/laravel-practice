@@ -10,10 +10,10 @@ class UserController extends Controller
     /**
      *  会員一覧画面
      * 
-     * @param Request $request
+     * @param User $users
      * @return Response
      */
-    public function index(Request $request)
+    public function index(User $users)
     {
         $users = User::orderBy('id', 'asc')->get();
         return view('users.index', ['users' => $users]);
