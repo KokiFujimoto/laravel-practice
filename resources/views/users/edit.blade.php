@@ -17,7 +17,7 @@
     </form>
     <form  action="{{ route('delete') }}" method="post" class="text-center">
         @csrf
-        {{ method_field('delete') }}
+        @method('delete')
         <input type="hidden" name="id" value="{{ $user->id }}">
         <input type="submit" class="btn btn-default border-dark mb-3 w-75" value="削除">
     </form>
