@@ -75,8 +75,7 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
-        $id = $request->id;
-        $user = User::find($id);
+        $user = User::find($request->id);
 
         $rules = [
             'name' => ['required', 'string', 'max:15'],

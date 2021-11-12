@@ -4,10 +4,10 @@
 
 @section('content')
 
-    <form action="{{ route('update') }}" method="post" class="text-center">
+    <form action="{{ route('update', ['id' => $user->id]) }}" method="post" class="text-center">
         @csrf
         <h1 class="mb-5">会員編集 会員ID：{{ $user->id }}</h1>
-        <input type="hidden" name="id" value="{{ $user->id }}">
+        <!-- <input type="hidden" name="id" value="{{ $user->id }}"> -->
         <div class="form-group d-flex flex-column">
             <input type="text" value="{{ $user->name }}" class="mb-3" name="name">
             <input type="tel" value="{{ $user->phone }}" class="mb-3" name="phone">
